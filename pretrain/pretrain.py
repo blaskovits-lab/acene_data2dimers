@@ -7,7 +7,7 @@ from transformers import (
     EarlyStoppingCallback
 )
 
-output_dir = os.path.expanduser("../chemberta_380k/") # I call my finetuned chemberta chemberta_380k
+output_dir = os.path.expanduser("../chemberta_380k/") # I call my pretrained chemberta chemberta_380k
 
 # Pretrained model and tokenizer from seyonec, user must save in parent dir 
 tokenizer = RobertaTokenizer.from_pretrained("../seyonec_chemberta")
