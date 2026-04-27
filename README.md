@@ -58,6 +58,7 @@ python finetune_de_pred.py
 - ```download_seyonec_chemberta.py``` is to download a pretrained ChemBERTa model.
 - ```pretrain``` contains ```pretrain.py```, the script used for domain specific pretraining of the seyonec_chemberta model. Running this script produces ```chemberta_380k``` and this directory contains the model used for downstream supervised regression. ```380k_smiles_data.txt``` is the training data and contains canonized SMILES strings obtained from PubChem that contain an anthracene substructure, and 15750 SMILES strings generated as described in the paper.
 - ```finetune_predict``` contains ```finetune_t1_pred.py``` and ```finetune_de_pred.py```, which are used to run supervised finetuning and immediate predictions for excited state energies. ```labeled_data_t1.csv``` and ```labeled_data_de.csv``` contain SMILES and respective energy labels (N=2503) computed using TD-DFT at the wB97XD/6-31G(d) level. N=928 are anthracene containing molecules obtained from the FORMED database and N=1575 are computed as described in the paper. The training and validation loss for the models employed in the paper are logged in ```loss_log_t1.csv``` and ```loss_log_t1.csv```. Predictions are performed on the SMILES in ```mol_library.smi``` (N=15750) with the results saved to ```t1_predictions.csv``` and ```de_predictions.csv```.
+- ```monomer_data_1575``` contains the optimized geometries as xyz files of N=1575 monomers computed at the wB97XD/6-31G(d) level.
 
 ## Citation
 
