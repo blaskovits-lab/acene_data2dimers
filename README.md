@@ -1,6 +1,6 @@
 # From Data to Dimers: Engineering Acene Derivatives for Photovoltaic Singlet Fission
 
-This repository contains the code and data used for training models to predict the scalar energies of acene derivatives from their SMILES strings (link to paper).
+This repository contains the code and data used for training models to predict the scalar energies of acene derivatives from their SMILES strings (preprint: https://doi.org/10.26434/chemrxiv.15003348/v1).
 
 ## Installation
 
