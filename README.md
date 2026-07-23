@@ -14,10 +14,13 @@ cd acene_data2dimers
 2. Setup virtual environment
 
 ```bash
-# create
+# on DRAC clusters we first
+module load gcc arrow python
+
+# then create
 python3 -m venv chemberta_env
 
-# activate
+# and activate
 source chemberta_env/bin/activate
 
 # install packages
@@ -35,9 +38,9 @@ python download_seyonec_chemberta.py
 
 ```bash
 cd pretrain
-python pretrain.py
+sbatch pretrain.sh
 cd ..
-# we submit as a job using pretrain.sh
+# note that you must specify your allocation in pretrain.sh
 ```
 
 2. Run regression finetuning and predictions on the molecule library SMILES
@@ -45,12 +48,12 @@ cd ..
 ```bash
 # for t1 model and predictions
 cd finetune_predict
-python finetune_t1_pred.py
+sbatch finetune_t1_pred.sh
 
 # for de model and predictions
-python finetune_de_pred.py
+sbatch finetune_de_pred.sh
 
-# optional: create bash scripts similar to pretrain.sh for submission
+# make sure to speficy your allocation in these scripts as well
 ```
 
 ## Contents

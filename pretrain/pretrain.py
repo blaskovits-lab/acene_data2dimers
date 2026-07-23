@@ -33,7 +33,6 @@ data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=True, m
 # Training arguments
 training_args = TrainingArguments(
     output_dir=output_dir,
-    overwrite_output_dir=True,
     num_train_epochs=5,
     per_device_train_batch_size=16,
     eval_strategy="steps",
