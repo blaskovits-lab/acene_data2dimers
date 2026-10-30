@@ -1,6 +1,6 @@
 # From Data to Dimers: Engineering Acene Derivatives for Photovoltaic Singlet Fission
 
-This repository contains the code and data used for training models to predict the scalar energies of acene derivatives from their SMILES strings (preprint: https://doi.org/10.26434/chemrxiv.15003348/v1).
+This repository contains the code and data used for training models to predict the scalar energies of acene derivatives from their SMILES strings (paper: https://doi.org/10.1002/chem.71268).
 
 ## Installation
 
@@ -69,7 +69,15 @@ sbatch finetune_de_pred.sh
 If you use this code please cite the paper.
 
 ```bash
-bibtex to come
+@article{cross2026,
+  author    = {Alexander J. Cross and Rik R. Tykwinski and J. Terence Blaskovits},
+  title     = {From Data to Dimers: Engineering Acene Derivatives for Photovoltaic Singlet Fission},
+  journal   = {Chemistry -- A European Journal},
+  year      = {2026},
+  pages     = {e71268},
+  doi       = {10.1002/chem.71268},
+  url       = {https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/chem.71268}
+}
 ```
 
 ChemBERTa was downloaded and initialized from Chithrananda et al.
